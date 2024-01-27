@@ -34,3 +34,40 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# project structure
+```
+my-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── api/
+│   │   └── openLibraryApi.js
+│   ├── app/
+│   │   ├── store.js
+│   │   └── rootReducer.js
+│   ├── features/
+│   │   ├── books/
+│   │   │   ├── BookList.js
+│   │   │   ├── BookFilters.js
+│   │   │   ├── booksSlice.js
+│   │   │   └── Book.js
+│   │   └── ...
+│   ├── components/
+│   │   ├── SearchBar.js
+│   │   ├── Loader.js
+│   │   └── ...
+│   ├── App.js
+│   ├── App.test.js
+│   └── index.js
+├── package.json
+└── ...
+```
+
+# FAQ 
+## common problem when building a react application
+`npm run start` result in the error `Error: ENOENT: no such file or directory, open  C:/projectfolder/.next\BUILD_ID`
+### to solve this you have to run `npm run build` from the root directory
+
+## using the [shadcn-ui](https://ui.shadcn.com/) library 
+first init the components with `npx shadcn-ui@latest init` to add any component you use such as menubar: `npx shadcn-ui@latest add menubar`
